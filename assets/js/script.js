@@ -103,3 +103,17 @@ if (localStorage.getItem("theme") === "light_theme") {
   document.body.classList.remove("light_theme");
   document.body.classList.add("dark_theme");
 }
+
+var form = document.getElementById("qform");
+function handleForm(event) {
+  event.preventDefault();
+  const payload = {
+    name: event.currentTarget[0].value,
+    email: event.currentTarget[1].value,
+    phone: event.currentTarget[2].value,
+    message: event.currentTarget[3].value,
+  }
+  console.log(payload);
+  alert("Your Query is Registered", payload);
+}
+form.addEventListener('submit', handleForm);
