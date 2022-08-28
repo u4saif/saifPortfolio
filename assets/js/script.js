@@ -104,6 +104,10 @@ if (localStorage.getItem("theme") === "light_theme") {
   document.body.classList.add("dark_theme");
 }
 
+
+/**
+ * Submit action added
+ */
 var form = document.getElementById("qform");
 function handleForm(event) {
   event.preventDefault();
