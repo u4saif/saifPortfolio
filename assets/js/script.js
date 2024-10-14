@@ -125,7 +125,8 @@ function handleForm(event) {
     name: payload.name,
     email: payload.email,
     phone: payload.phone,
-    message:payload.message
+    message:payload.message,
+    createdAt:new Date().toUTCString()
   });
 
   const emailBody=`<!doctype html>
